@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/*------------ colors/fonts -------------------*/
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --vpale-blue: hsl(225, 100%, 98%);
+  --des-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+
+  --primary-font: 'Red Hat Display', sans-serif;
+}
+
+/* -------------css reset--------------------- */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a[class] {
+  text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* ------------------------------------------ */
+body {
+  background: url(images/pattern-background-mobile.svg), var(--pale-blue);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: grid;
+  place-items: center;
+  font-family: var(--primary-font);
+}
+
+.card-container {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 30px 20px 0 hsla(245, 75%, 52%, 0.11);
+  overflow: hidden;
+  max-width: 27.5rem;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+}
+/* image */
+.card-img img {
+  height: auto;
+}
+/* text */
+.card-text {
+  text-align: center;
+}
+.title {
+  color: var(--dark-blue);
+  font-size: 1.4rem;
+  font-weight: 900;
+  padding: 1.3em 0 0.8em 0;
+}
+.text {
+  color: var(--des-blue);
+  line-height: 1.6;
+  font-size: 0.95rem;
+  padding: 0 2.1em 1.4em 2.1em;
+}
+
+.plan-container {
+  background: var(--vpale-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1.5em 1.5em 1.5em;
+  padding: 1em;
+  border-radius: 10px;
+}
+.plan-container-left {
+  display: flex;
+}
+.plan-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1.2em;
+  gap: 0.2em;
+  text-align: left;
+  font-size: 0.7rem;
+}
+.plan-text h2 {
+  color: var(--dark-blue);
+  font-size: 0.9rem;
+}
+.plan-text p {
+  color: var(--des-blue);
+  font-size: 0.8rem;
+}
+.plan-container-right a {
+  color: var(--bright-blue);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-decoration: underline;
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+.plan-container-right a:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+/* buttons */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 0.65em;
+  margin-bottom: 1.5em;
+}
+.btn {
+  all: unset;
+  display: block;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  padding: 1em;
+}
+.payment-btn {
+  background: var(--bright-blue);
+  color: white;
+  box-shadow: 0 15px 20px 0 hsla(245, 75%, 52%, 0.25);
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+.payment-btn:hover {
+  opacity: 0.8;
+}
+.cancel-btn {
+  color: var(--des-blue);
+  transition: color 0.2s ease;
+}
+.cancel-btn:hover {
+  color: var(--dark-blue);
+}
+/* footer */
+a {
+  text-decoration: none;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--white);
+  text-decoration: none;
+}
+.attribution a:hover {
+  color: var(--dark-cyan);
+}
+
+@media (min-width: 450px) {
+  body {
+    background: url(images/pattern-background-desktop.svg), var(--pale-blue);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .title {
+    font-size: 1.7rem;
+    padding-top: 1.7em;
+    padding-bottom: 0.7em;
+  }
+  .text {
+    font-size: 1.05rem;
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+  .plan-container {
+    margin: 0 3em 2em 3em;
+    padding: 1.5em;
+  }
+  .plan-text h2 {
+    font-size: 1.05rem;
+  }
+  .plan-text p {
+    font-size: 1.05rem;
+  }
+  .plan-container-right a {
+    font-size: 0.9rem;
+  }
+  .btn {
+    margin-left: 3em;
+    margin-right: 3em;
+  }
+}
